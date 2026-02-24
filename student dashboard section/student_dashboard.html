@@ -6,6 +6,7 @@
     <title>College Portal - Dashboard</title>
     <link rel="stylesheet" href="student_dashboard.css" />
     <link rel="stylesheet" href="notes_student_dashboard.css">
+    <link rel="stylesheet" href="upload_notes_student_dashboard.css">
   </head>
 
   <body>
@@ -301,26 +302,81 @@
       <!-- ✅ UPLOAD NOTES PAGE -->
       <!-- ========================= -->
       <section class="page-section" id="uploadPage">
-        <div class="notes-container">
-  <div class="notes-header">
-    <h1>Notes Library</h1>
-    <p>Browse and download study materials</p>
-  </div>
+       <!-- ================= RIGHT SECTION ================= -->
+<div class="main-content">
 
-  <div class="notes-controls">
-    <input type="text" id="searchInput" placeholder="Search notes..." />
+    <div class="top-section">
+        <h1>Upload Notes</h1>
+        <p>Share your study materials with classmates</p>
+    </div>
+
+    <div class="content-grid">
+
+        <!-- Upload Form Card -->
+        <div class="card upload-card">
+            <h2>Upload New Notes</h2>
+
+            <form id="uploadForm">
+
+                <div class="form-group">
+                    <label>Note Title</label>
+                    <input type="text" id="noteTitle" placeholder="Enter note title" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Subject</label>
+                    <select id="noteSubject" required>
+                        <option value="">Select subject</option>
+                        <option>Computer Science</option>
+                        <option>Mathematics</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="noteDescription" placeholder="Provide a brief description"></textarea>
+                </div>
+
+               <div class="upload-box" id="uploadBox">
     
-    <select id="subjectFilter">
-      <option value="all">All Subjects</option>
-      <option value="Mathematics">Mathematics</option>
-      <option value="Physics">Physics</option>
-      <option value="Computer Science">Computer Science</option>
-    </select>
-  </div>
+    
+    <div class="upload-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.99994 17C2.99994 17.93 2.99994 18.395 3.10216 18.7765C3.37956 19.8117 4.18821 20.6204 5.22348 20.8978C5.60498 21 6.06997 21 6.99994 21L16.9999 21C17.9299 21 18.3949 21 18.7764 20.8978C19.8117 20.6204 20.6203 19.8117 20.8977 18.7765C20.9999 18.395 20.9999 17.93 20.9999 17"/>
+    <path d="M16.5 7.49993C16.5 7.49993 13.1858 2.99997 12 2.99996C10.8141 2.99995 7.50002 7.49996 7.50002 7.49996M12 3.99996V16"/>
+</svg>
+    </div>
 
-  <div id="notesGrid" class="notes-grid">
-    <!-- Notes will render here dynamically -->
-  </div>
+    <p class="upload-text">
+        Click to upload or drag and drop
+    </p>
+
+    <span class="upload-subtext">
+        PDF, DOC, DOCX (Max. 10MB)
+    </span>
+
+    <input type="file" id="noteFile" hidden>
+
+</div>
+
+                <button type="submit" class="primary-btn">
+                    Upload Notes
+                </button>
+
+            </form>
+        </div>
+
+
+        <!-- Upload History Card -->
+        <div class="card history-card">
+            <h2>Upload History</h2>
+            <div id="historyContainer"></div>
+        </div>
+
+    </div>
+
 </div>
       </section>
 
@@ -396,5 +452,6 @@
 
     <script src="student_dashboard.js"></script>
     <script src="notes_student_dashboard.js"></script>
+    <script src="upload_notes_student_dashboard.js"></script>
   </body>
 </html>

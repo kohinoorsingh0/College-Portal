@@ -1,0 +1,156 @@
+/* ================= RIGHT SECTION ================= */
+
+.main-content {
+    padding: 0px;
+    background: #f5f7fb;
+    min-height: 100vh;
+    flex: 1;
+}
+
+.top-section h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.top-section p {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+/* Cards */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 80px;
+}
+
+.upload-box {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    background: #f1f5ff;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2d5bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* History Items */
+.history-item {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.history-item h4 {
+    margin-bottom: 4px;
+}
+
+.history-item small {
+    color: #6c757d;
+}
+
+.status {
+    font-weight: 500;
+    float: right;
+}
+
+.approved { color: green; }
+.pending { color: orange; }
+.rejected { color: red; }
+
+
+
+
+
+
+
+.upload-box {
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    background: #f8faff;
+    border-color: #2d5bff;
+}
+
+.upload-icon {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px; /* Space reserved for SVG */
+}
+
+.upload-text {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.upload-subtext {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+
+
+
+
+
+.upload-card h2{
+    font-weight: 500;
+
+}
