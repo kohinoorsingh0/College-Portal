@@ -1,11 +1,20 @@
+/* ================= GLOBAL FIX ================= */
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 /* ================= RIGHT SECTION ================= */
 
 .main-content {
-    padding: 0px;
     background: #f5f7fb;
-    min-height: 100vh;
-    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+/* ================= HEADER ================= */
 
 .top-section h1 {
     font-size: 28px;
@@ -17,101 +26,69 @@
     margin-bottom: 25px;
 }
 
+/* ================= GRID ================= */
+
 .content-grid {
+    flex: 1;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 25px;
+    overflow: hidden;
 }
 
-/* Cards */
+/* ================= CARDS ================= */
+
 .card {
     background: #ffffff;
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
 }
 
-/* Form */
+/* ================= FORM ================= */
+
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
 }
 
 .form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
     display: block;
-    font-weight: 500;
-    margin-bottom: 6px;
 }
 
 .form-group input,
-.form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    padding: 14px 18px;
+    border-radius: 16px;
+    border: 1px solid #dbe2ea;
+    background: #f8fafc;
+    font-size: 15px;
+    transition: 0.2s ease;
     outline: none;
 }
 
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #bfc9d4;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: #ffffff;
+    border-color: #2d5bff;
+    box-shadow: 0 0 0 3px rgba(45, 91, 255, 0.12);
+}
+
 .form-group textarea {
+    height: 100px;
     resize: none;
-    height: 80px;
 }
 
-.upload-box {
-    border: 2px dashed #cbd5e1;
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: 0.3s;
-}
-
-.upload-box:hover {
-    background: #f1f5ff;
-}
-
-.primary-btn {
-    width: 100%;
-    padding: 12px;
-    background: #2d5bff;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-/* History Items */
-.history-item {
-    background: #f8fafc;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-}
-
-.history-item h4 {
-    margin-bottom: 4px;
-}
-
-.history-item small {
-    color: #6c757d;
-}
-
-.status {
-    font-weight: 500;
-    float: right;
-}
-
-.approved { color: green; }
-.pending { color: orange; }
-.rejected { color: red; }
-
-
-
-
-
-
+/* ================= UPLOAD BOX ================= */
 
 .upload-box {
     border: 2px dashed #cbd5e1;
@@ -119,6 +96,7 @@
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
+    margin-bottom: 20px;
     transition: 0.3s;
 }
 
@@ -127,30 +105,173 @@
     border-color: #2d5bff;
 }
 
-.upload-icon {
-    margin-bottom: 15px;
+/* ================= BUTTON ================= */
+
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    background: #2d5bff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: #1f45e6;
+}
+
+/* ================= CUSTOM DROPDOWN ================= */
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-btn {
+    padding: 14px 18px;
+    border-radius: 16px;
+    border: 1px solid #dbe2ea;
+    background: #f8fafc;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 60px; /* Space reserved for SVG */
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-.upload-text {
-    font-weight: 500;
-    margin-bottom: 5px;
+.dropdown-btn:hover {
+    border-color: #bfc9d4;
 }
 
-.upload-subtext {
-    color: #6c757d;
+.custom-dropdown.active .dropdown-btn {
+    background: #ffffff;
+    border-color: #2d5bff;
+    box-shadow: 0 0 0 3px rgba(45, 91, 255, 0.12);
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    margin-top: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    display: none;
+    z-index: 999;
+}
+
+.custom-dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-option {
+    padding: 12px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background: #eef2ff;
+}
+
+/* ================= HISTORY SECTION ================= */
+
+.history-card {
+    overflow: hidden;
+}
+
+#historyContainer {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* Scrollbar */
+#historyContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+#historyContainer::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* ================= HISTORY ITEMS ================= */
+
+.history-item {
+    background: #f1f5f9;
+    padding: 20px 24px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    transition: 0.2s ease;
+}
+
+.history-item:hover {
+    background: #e8eef7;
+}
+
+.history-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.history-top h4 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.history-item small {
+    color: #64748b;
     font-size: 14px;
 }
 
+/* ================= STATUS TEXT ================= */
 
-
-
-
-
-.upload-card h2{
-    font-weight: 500;
-
+.status {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
 }
+
+.approved { color: #16a34a; }
+.pending  { color: #f59e0b; }
+.rejected { color: #ef4444; }
+
+
+
+
+.card h2{
+    margin-bottom:20px ;
+}
+
+.upload-card svg{
+    margin-right: 10px;
+    color: #1f45e6;
+}
+.history-card svg{
+    margin-right: 10px;
+    color: #1f45e6;
+}
+
+
+
+
+
+.status{
+    margin-right: 20px;
+}
+
+.card h2{
+    font-weight: 600;
+}
+
+
+
