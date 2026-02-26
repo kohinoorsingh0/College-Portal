@@ -415,17 +415,41 @@
       <p>Manage your assignments and submissions</p>
     </div>
 
+    <!-- Filters -->
+    <div class="assignment-filters">
+
+      <input 
+        type="text" 
+        id="assignmentSearch"
+        placeholder="Search assignment..."
+      />
+
+      <select id="assignmentSubjectFilter">
+        <option value="all">All Subjects</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Physics">Physics</option>
+        <option value="Computer Science">Computer Science</option>
+      </select>
+
+      <select id="assignmentStatusFilter">
+        <option value="all">All Status</option>
+        <option value="Pending">Pending</option>
+        <option value="Submitted">Submitted</option>
+        <option value="Overdue">Overdue</option>
+      </select>
+
+    </div>
+
     <!-- Stats -->
     <div class="assign-stats" id="assignStats"></div>
 
-    <!-- Table Box -->
+    <!-- Table -->
     <div class="assign-box">
 
       <div class="assign-box-header">
         <h3>All Assignments</h3>
       </div>
 
-      <!-- Scrollable Area -->
       <div class="assign-table-wrapper">
 
         <table class="assign-table">
@@ -442,7 +466,7 @@
           </thead>
 
           <tbody id="assignTableBody">
-            <!-- JS will render rows here -->
+            <!-- JS will render rows -->
           </tbody>
         </table>
 
@@ -453,8 +477,6 @@
   </div>
 
 </section>
-      
-
       <!-- ========================= -->
       <!-- ✅ NOTIFICATIONS PAGE -->
       <!-- ========================= -->
