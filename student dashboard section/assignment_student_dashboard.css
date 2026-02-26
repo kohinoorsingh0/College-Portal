@@ -5,7 +5,7 @@
 #assignmentsPage {
   
   
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 /* HEADER */
@@ -179,3 +179,19 @@
   font-size: 13px;
   cursor: pointer;
 }
+
+
+
+.assign-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.assign-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
