@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="student_dashboard.css" />
     <link rel="stylesheet" href="notes_student_dashboard.css">
     <link rel="stylesheet" href="upload_notes_student_dashboard.css">
+    <link rel="stylesheet" href="assignment_student_dashboard.css">
   </head>
 
   <body>
@@ -403,17 +404,46 @@
       <!-- ========================= -->
       <!-- ✅ ASSIGNMENTS PAGE -->
       <!-- ========================= -->
-      <section class="page-section" id="assignmentsPage">
-        <h1 class="page-title">Assignments</h1>
-        <p class="page-sub">Your assignments will show here.</p>
+      
+   <section class="page-section" id="assignmentsPage">
 
-        <div class="card">
-          <h3>📝 Pending Assignments</h3>
-          <p style="margin-top: 10px; color: #64748b">
-            (Yaha assignment list add kar sakte ho)
-          </p>
-        </div>
-      </section>
+  <div class="assign-wrapper">
+
+    <div class="assign-header">
+      <h1>Assignments</h1>
+      <p>Manage your assignments and submissions</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="assign-stats" id="assignStats"></div>
+
+    <!-- Table -->
+    <div class="assign-box">
+      <div class="assign-box-header">
+        <h3>All Assignments</h3>
+      </div>
+
+      <table class="assign-table">
+        <thead>
+          <tr>
+            <th>Assignment</th>
+            <th>Subject</th>
+            <th>Teacher</th>
+            <th>Due Date</th>
+            <th>Days Left</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="assignTableBody">
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</section>
+      
 
       <!-- ========================= -->
       <!-- ✅ NOTIFICATIONS PAGE -->
@@ -473,5 +503,6 @@
     <script src="student_dashboard.js"></script>
     <script src="notes_student_dashboard.js"></script>
     <script src="upload_notes_student_dashboard.js"></script>
+    <script src="assignment_student_dashboard.js"></script>
   </body>
 </html>

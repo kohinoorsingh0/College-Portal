@@ -1,0 +1,181 @@
+/* =========================================
+   ASSIGNMENTS PAGE (SCOPED STYLING)
+========================================= */
+
+#assignmentsPage {
+  
+  
+  min-height: 100vh;
+}
+
+/* HEADER */
+.assign-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.assign-header p {
+  color: #6b7280;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+/* STATS CARDS */
+.assign-stats {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.assign-card {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.assign-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+}
+
+/* Colors */
+.assign-pending .assign-icon {
+  background: #fef3c7;
+}
+
+.assign-overdue .assign-icon {
+  background: #fee2e2;
+}
+
+.assign-submitted .assign-icon {
+  background: #d1fae5;
+}
+
+.assign-card h2 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.assign-card span {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* TABLE BOX */
+.assign-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.assign-box-header {
+  margin-bottom: 20px;
+}
+
+.assign-box-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* TABLE */
+.assign-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assign-table thead {
+  background: #f3f4f6;
+}
+
+.assign-table th {
+  text-align: left;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.assign-table td {
+  padding: 18px 16px;
+  font-size: 14px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.assign-table tbody tr {
+  border-top: 1px solid #e5e7eb;
+}
+
+.assign-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.assign-table td strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.assign-table td p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* BADGES */
+.assign-badge {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.assign-badge.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.assign-badge.submitted {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.assign-badge.overdue {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* BUTTONS */
+.assign-btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.assign-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.assign-btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
